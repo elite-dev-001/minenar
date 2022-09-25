@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from zenix.dexignzone.com/xhtml/portofolio.html by HTTrack Website Copier/3.x [XR&CO'2017], Fri, 20 May 2022 19:05:05 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="Zenix - Crypto Admin Dashboard" />
+	<meta property="og:title" content="Zenix - Crypto Admin Dashboard" />
+	<meta property="og:description" content="Zenix - Crypto Admin Dashboard" />
+	<meta property="og:image" content="social-image.png" />
+	<meta name="format-detection" content="telephone=no">
+    <title>Minenar - Dashboard </title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+	<link rel="stylesheet" href="vendor/chartist/css/chartist.min.css">
+    <link href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/my-style.css">
+	
+</head>
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+
+            <div class="nav-control">
+                <div class="hamburger">
+                    <span class="line"></span><span class="line"></span><span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+		
+		
+		
+			<!--**********************************
+            Header start
+        ***********************************-->
+        <div class="header">
+            <div class="header-content">
+                <nav class="navbar navbar-expand">
+                    <div class="collapse navbar-collapse justify-content-between">
+                        <div class="header-left">
+							<div class="input-group search-area right d-lg-inline-flex d-none">
+								<input type="text" class="form-control" placeholder="Search here...">
+								<span class="input-group-text"><a href="javascript:void(0)"><i class="flaticon-381-search-2"></i></a></span>
+							</div>
+                        </div>
+                        <ul class="navbar-nav header-right main-notification">
+							<li class="nav-item dropdown notification_dropdown">
+                                <a class="nav-link bell dz-theme-mode" href="#">
+									<i id="icon-light" class="far fa-sun"></i>
+                                    <i id="icon-dark" class="far fa-moon"></i>
+                                </a>
+							</li>
+							<li class="nav-item dropdown notification_dropdown">
+                                <a class="nav-link bell dz-fullscreen" href="#">
+                                    <svg id="icon-full" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" style="stroke-dasharray: 37, 57; stroke-dashoffset: 0;"></path></svg>
+                                    <svg id="icon-minimize" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minimize"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3" style="stroke-dasharray: 37, 57; stroke-dashoffset: 0;"></path></svg>
+                                </a>
+							</li>
+                            <li class="nav-item dropdown header-profile">
+                                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
+                                    <i class="fa fa-user-circle-o" aria-hidden="true" style="font-size: 2rem;"></i>
+									<div class="header-info">
+										<span id="my-name"></span>
+										<small id="my-email"></small>
+									</div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="portofolio.html" class="dropdown-item ai-icon">
+                                        <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                        <span class="ms-2">Profile </span>
+                                    </a>
+                                    <a href="/" class="dropdown-item ai-icon">
+                                        <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                                        <span class="ms-2">Logout </span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+				<!-- <div class="sub-header">
+					<div class="d-flex align-items-center flex-wrap me-auto">
+						<h5 class="dashboard_bar">Dashboard</h5>
+					</div>
+				</div> -->
+			</div>
+        </div>
+        <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+         <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <div class="deznav">
+            <div class="deznav-scroll">
+				<div class="main-profile">
+					<div class="image-bx">
+						<img src="images/logo-1.png" alt="">
+					</div>
+					<h5 style="color: gold;" class="name"><span class="font-w400">Welcome to</span> Minenar</h5>
+				</div>
+				<ul class="metismenu" id="menu">
+					<!-- <li class="nav-label first">Main Menu</li> -->
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-144-layout"></i>
+							<span class="nav-text">Main Menu</span>
+						</a>
+                        <ul aria-expanded="false">
+							<li><a href="dashboard.html">Dashboard</a></li>
+							<li><a href="portofolio.html">My Account</a></li>
+							<li><a href="my-stakes.html">Staking</a></li>
+							<li><a href="wallet.html">Wallet</a></li>
+							<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+								<span class="nav-text">Transactions</span>
+							</a>
+							<ul aria-expanded="false">
+								<li><a href="deposit.html">Deposit</a></li>
+								<li><a href="withdraw.html">Withdrawals</a></li>
+								<li><a href="stake-history.html">Staking</a></li>
+							</ul>
+						</li>
+                        <li>
+                            <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                                <span class="nav-text">Team</span>
+                            </a>
+                            <ul aria-expanded="false">
+                                <li><a href="referral.html">My Team</a></li>
+                                <li><a href="income.html">Team Income</a></li>
+                            </ul>
+                        </li>
+							<li><a href="security.html">Security</a></li>
+							<li><a href="support.html">Support Center</a></li>
+						</ul>
+
+                    </li>
+					
+					<div class="copyright">
+						<p><strong>Minenar User Dashboard</strong> © 2022 All Rights Reserved</p>
+						<!-- <p class="fs-12">Made with <span class="heart"></span> by DexignZone</p> -->
+					</div>
+				</ul>
+			</div>
+        </div>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+		
+		<!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+			<div class="container-fluid">
+				<div class="form-head mb-5">
+					<h2 class="font-w600 mb-0">My Team</h2>
+				</div>
+                <div class="main-wallet-container">
+					<p>Referral Bonus</p>
+					<p id="referral-balance"></p>
+				</div>
+                <form>
+                    <div class="withdraw-amount">
+						<label for="link">Referral Link</label>
+						<div>
+                            <input style="width: 100%;" type="tel" id="link" name="link" readonly />
+                        </div>
+					</div>
+                    <button id="copy" class="btnxs">Copy</button>
+                    <div class="withdraw-amount">
+						<label for="code">Referral Code</label>
+						<div>
+                            <input style="width: 100%;" type="tel" id="code" name="code" readonly />
+                        </div>
+					</div>
+                </form>
+                <!-- <div class="my-team" style="margin: 2em 0">
+                    <p style="text-align: center">Team</p>
+                    <div class="teams">
+                        <div class="total">
+                            <p>Total Number</p>
+                            <p id="total"></p>
+                        </div>
+                        <div class="levels">
+                            <div class="level">
+                                <p>Level 1 (10%)</p>
+                                <p id="level1"></p>
+                            </div>
+                            <div class="level">
+                                <p>Level 2 (7%)</p>
+                                <p id="level2"></p>
+                            </div>
+                            <div class="level">
+                                <p>Level 3 (5%)</p>
+                                <p id="level3"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="team-members">
+                    <p>Team Members</p>
+                    <p id="total"></p>
+                    <div class="team-levels">
+                        <p id="btn">Level 1</p>
+                        <p id="btn">Level 2</p>
+                        <p id="btn">Level 3</p>
+                    </div>
+                    <div id="all"></div>
+                </div>
+			</div>
+		</div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <!-- <p>Copyright © Designed &amp; Developed by <a href="../../external.html?link=http://dexignzone.com/" target="_blank">DexignZone</a> 2021</p> -->
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+
+		<!--**********************************
+           Support ticket button start
+        ***********************************-->
+
+        <!--**********************************
+           Support ticket button end
+        ***********************************-->
+	
+	
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+    <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="vendor/global/global.min.js"></script>
+	<script src="vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	<script src="vendor/chart.js/Chart.bundle.min.js"></script>
+	
+	<!-- Apex Chart -->
+	<script src="vendor/apexchart/apexchart.js"></script>
+	
+	
+	<!-- Dashboard 1 -->
+	<script src="js/dashboard/portofolio.js"></script>
+	
+    <script src="js/custom.js"></script>
+	<script src="js/deznav-init.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/styleSwitcher.js"></script>
+	<script src="https://use.fontawesome.com/38d6cb7c59.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	
+</body>
+
+<script>
+        ///////////////////////////////////////
+    const id = window.localStorage.getItem('id')
+	const fullName = document.querySelector('#fullName')
+	const referral= document.querySelector('#referral-balance')
+	const token = window.localStorage.getItem('token')
+	const myNames = document.querySelectorAll('#my-name')
+	const myEmail = document.querySelector('#my-email')
+    let kycVerified
+    const link = document.querySelector('#link')
+    const code = document.querySelector('#code')
+
+
+
+	const getUser = () => {
+	
+	axios.get(`https://minenarapi.herokuapp.com/api/user/get/one/${id}`, {
+	  headers: {
+		'Authorization': `token ${token}`
+	  }
+	}).then((res) => {
+		const data = res.data[0]
+		console.log(data['referralCode'])
+		mainBalance = data['mainBalance']
+
+		myNames.forEach((name) => {
+		  name.innerText = data['fullName']
+		  name.value = data['fullName']
+	  });
+
+	  kycVerified = data['kycVerified']
+
+      myEmail.innerText = data['email']
+      referral.innerHTML = `${data['referralBalance']} LTC`
+
+      kycVerified = data['kycVerified']
+      link.value = `https://www.minenar.com/signup.html?invite=${data['referralCode']} `
+      code.value = data['referralCode']
+	})
+}
+
+getUser()
+//////////////////
+// const level1 = document.querySelector('#level1')
+// const level2 = document.querySelector('#level2')
+// const level3 = document.querySelector('#level3')
+const total = document.querySelector('#total')
+const allData = [];
+
+const getAllUsers = () => {
+	
+	axios.get(`https://minenarapi.herokuapp.com/api/user/get/all`, {
+	  headers: {
+		'Authorization': `token ${token}`
+	  }
+	}).then((res) => {
+		const data = Array.from(res.data['results'])
+		console.log(data)
+
+       const level1Id = data.filter((user) => user['level1Id'] === id)
+    //    level1.innerHTML = level1Id.length
+       const data1 = {'level': "LV1", "length": level1Id.length, "data": level1Id}
+       allData.push(data1)
+
+       const level2Id = data.filter((user) => user['level2Id'] === id)
+    //    level2.innerHTML = level2Id.length
+       const data2 = {'level': "LV2", "length": level2Id.length, "data": level2Id}
+       allData.push(data2)
+
+       const level3Id = data.filter((user) => user['level3Id'] === id)
+    //    level3.innerHTML = level3Id.length
+       const data3 = {'level': "LV3", "length": level3Id.length, "data": level3Id}
+       allData.push(data3)
+
+       const totalReferral = level1Id.length + level2Id.length + level3Id.length
+       total.innerHTML = totalReferral
+
+
+
+	}).catch((err) => {
+        console.log(err)
+    })
+}
+
+getAllUsers()
+
+//////////////////////////LINK////////////////////
+const copy = document.querySelector('#copy')
+copy.addEventListener('click', async(e) => {
+        e.preventDefault()
+        await navigator.clipboard.writeText(link.value)
+        window.alert('Copied')
+    })
+
+/////////////////////////
+const allContain = document.querySelector('#all')
+const btns = Array.from(document.querySelectorAll('#btn'))
+btns.forEach((btn, index) => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault()
+        
+        const contain = document.createElement('div');
+        const div1 = document.createElement('div')
+        div1.className = 'level-box'
+            const para1 = document.createElement('p')
+            para1.innerHTML = allData[index]['level']
+            const para2 = document.createElement('p')
+            para2.className = 'para2'
+            para2.innerHTML = allData[index]['length']
+        div1.appendChild(para1)
+        div1.appendChild(para2)
+    contain.appendChild(div1)
+
+        const div2 = document.createElement('div')
+        div2.className = 'teamed-box'
+        const arr = Array.from(allData[index]['data'])
+
+        if(arr.length !== 0) {
+            arr.forEach((refer) => {
+            const p1 = document.createElement('p')
+            p1.innerHTML = `Name: ${refer['fullName']} `
+            const p2 = document.createElement('p')
+            p2.innerHTML = `UID: ${refer['referralCode']}`
+            const p3 = document.createElement('p')
+            p3.innerHTML = `Email: ${refer['email']}`
+            p3.setAttribute('style', 'border-bottom: 3px solid goldenrod')
+            div2.appendChild(p1)
+            div2.appendChild(p2)
+            div2.appendChild(p3)
+        contain.appendChild(div2)
+        })
+        }else {
+            const p1 = document.createElement('p')
+            p1.innerHTML = `No Active referrals on this level`
+            div2.appendChild(p1)
+        contain.appendChild(div2)
+        }
+
+        if(allContain.hasChildNodes()){
+            allContain.replaceChild(contain, allContain.firstChild)
+        }else{
+            allContain.appendChild(contain)
+        }
+    
+    })
+})
+
+
+</script>
+
+
+
+
+<!-- Mirrored from zenix.dexignzone.com/xhtml/portofolio.html by HTTrack Website Copier/3.x [XR&CO'2017], Fri, 20 May 2022 19:05:08 GMT -->
+</html>

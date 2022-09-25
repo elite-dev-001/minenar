@@ -1,0 +1,249 @@
+.welcome-text{
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #000;
+}
+
+.main-wallet-container {
+    background: purple;
+    color: gold;
+    border-radius: 7px;
+    padding: 1em;
+    margin-bottom: 3em;
+}
+
+.main-wallet-container > p{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.main-wallet-container > div {
+    display: flex;
+    justify-content: space-between;
+}
+.main-wallet-container > div p{
+    font-size: 1rem;
+}
+.btnx {
+    font-size: 1rem;
+    padding: .7em 4em;
+    border-style: none;
+    background: goldenrod;
+    color: #fff;
+}
+.btnxs {
+    font-size: 1rem;
+    padding: .4em 1em;
+    border-style: none;
+    background: goldenrod;
+    color: #fff;
+}
+
+.my-form div{
+    display: flex;
+    flex-direction: column;
+}
+.my-form label{
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.my-form input, select {
+    width: 90%;
+    margin: .5em auto;
+    padding: 1em 10px;
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+}
+.btn-blue{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-blue button{
+    font-size: 1rem;
+    padding: .7em 4em;
+    border-style: none;
+    background: blue;
+    color: #fff;
+}
+.my-stakes{
+    background: purple;
+    color: white;
+}
+.deposit-container{
+    background: #fff;
+    padding: 2em 1em;
+}
+
+.deposit-confirm{
+    display: flex;
+    justify-content: space-around;
+}
+.deposit-confirm button {
+    border-style: none;
+    padding: .7em 2em;
+    margin: 1em;
+    font-size: 1rem;
+    color: #fff;
+}
+.deposit-confirm button:first-child{
+    background: blue;
+}
+.deposit-confirm button:last-child{
+    background: red;
+}
+.withdraw-amount{
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.withdraw-amount input{
+    width: 70%;
+    margin: .5em auto;
+    padding: .3em 10px;
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+}
+.withdraw-amount button{
+    border-style: none;
+    padding: .5em 2em;
+    margin: 1em;
+    font-size: 1rem;
+    color: #fff;
+    background: purple;
+}
+.ltc-container{
+    background: purple;
+    color: #fff;
+    padding: 1em 2em;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin: 1em 0;
+}
+.my-team{
+    background: purple;
+    color: #fff;
+    padding: 1em 2em;
+    display: grid;
+    grid-template-rows: 10% 90%;
+    margin-bottom: 2em;
+}
+.my-team > p{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.teams{
+    display: grid;
+    grid-template-rows: 40% 50%;
+}
+.total{
+    width: 70%;
+    margin: 1.5em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background: goldenrod;
+    font-weight: bold;
+}
+.levels{
+    background-color: goldenrod;
+    padding: 1em 2em;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+.level{
+    display: flex;
+    justify-content: space-between;
+}
+.panel{
+    display: flex;
+    font-size: 1rem;
+    font-weight: bold;
+    justify-content: space-between;
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+.panel2{
+    display: flex;
+    font-size: 1rem;
+    font-weight: normal;
+    justify-content: space-between;
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+/* .team-members{
+    border: 1px solid #000;
+} */
+.team-members > p:first-child{
+    background: purple;
+    width: 50%;
+    margin: 1em auto;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.team-members > p:nth-child(2){
+    background: goldenrod;
+    width: 20%;
+    margin: 1em auto;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.team-levels{
+    background: goldenrod;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.team-levels > p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    border-right: 1px solid #000;
+    height: 100%;
+    cursor: pointer;
+    font-weight: bold;
+}
+.level-box{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    background: purple;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 1em 3em;
+}
+.para2{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background: white;
+    color: goldenrod;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2em;
+    font-size: 1rem;
+}
+.teamed-box{
+    /* background: #fff; */
+    color: goldenrod;
+    padding: 1em 2em;
+    /* border-bottom: 3px solid goldenrod; */
+}
+.teamed-box > p{
+    padding: .1em 0;
+    font-size: 1.15rem;
+}

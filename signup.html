@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- Mirrored from gfxpartner.com/Crypten/assets/dark/singup.html by HTTrack Website Copier/3.x [XR&CO'2017], Sat, 07 May 2022 06:13:57 GMT -->
+<head>
+   
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!--====== Title ======-->
+    <title>Minenar – Secure LTC Staking Platform</title>
+    
+    <!--====== Favicon Icon ======-->
+    <!-- <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/png"> -->
+
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <!--====== Fontawesome css ======-->
+    <link rel="stylesheet" href="assets/css/all.css">
+    
+    <!--====== nice select css ======-->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="assets/css/slick.css">
+
+    <!--====== Swiper css ======-->
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="assets/css/default.css">
+    
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="assets/css/style.css">
+  
+  
+</head>
+<style>
+    /* Absolute Center Spinner */
+.loading {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: visible;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* Transparent Overlay */
+.loading:before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* :not(:required) hides these rules from IE9 and below */
+.loading:not(:required) {
+  /* hide "loading..." text */
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.loading:not(:required):after {
+  content: '';
+  display: block;
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  margin-top: -0.5em;
+  -webkit-animation: spinner 1500ms infinite linear;
+  -moz-animation: spinner 1500ms infinite linear;
+  -ms-animation: spinner 1500ms infinite linear;
+  -o-animation: spinner 1500ms infinite linear;
+  animation: spinner 1500ms infinite linear;
+  border-radius: 0.5em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.5) -1.5em 0 0 0, rgba(0, 0, 0, 0.5) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+  box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) -1.5em 0 0 0, rgba(0, 0, 0, 0.75) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+}
+
+/* Animation */
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+</style>
+<body>
+   
+    <!--====== ERROR PART START ======-->
+    
+    <section class="error-area bg_cover" style="background-image: url(assets/images/login-bg.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-8">
+                    <div class="login-box">
+                        <div class="login-title text-center">
+                            <img src="assets/images/logo4.png" alt="logo">
+                            <h3 class="title">Create an Account!</h3>
+                        </div>
+                        <div class="login-input">
+                            <form action="#">
+                                <div class="input-box mt-10">
+                                    <input type="text" placeholder="Full Name" id="fullname" required>
+                                </div>
+                                <div class="input-box mt-10">
+                                    <input type="email" placeholder="Email" id="email" required>
+                                </div>
+                                <div class="input-box mt-10">
+                                    <input type="text"  id="referral" placeholder="Referral Code (Optional)">
+                                </div>
+                                <!-- <div class="input-box mt-10">
+                                    <input type="text" placeholder="Home Address">
+                                </div>
+                                <div class="input-box mt-10">
+                                    <input type="tel" placeholder="Postal Code">
+                                </div>
+                                <div class="input-box mt-10">
+                                    <input type="text" placeholder="Country">
+                                </div>
+                                <div class="input-box mt-10">
+                                    <input type="text" placeholder="City">
+                                </div> -->
+                                <div class="input-box mt-10">
+                                    <input type="password" placeholder="Password" id="password" required>
+                                </div>
+                                <div class="input-box mt-10">
+                                    <input type="password" placeholder="Confirm Password" id="c_password" required>
+                                    <ul class="checkbox_common checkbox_style5">
+                                        <li>
+                                            <input type="checkbox" name="checkbox5" id="checkbox13">
+                                            <label for="checkbox13"><span></span><a href="privacy_policy.html" target="_blank">I agree to the Terms of Service and Privacy Policy</a></label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="loading">Loading&#8230;</div>
+                                <div class="input-btn mt-10">
+                                    <button class="main-btn" type="submit">sign up  <i class="fal fa-arrow-right"></i></button>
+                                    <span>Already have an account? <a href="login.html">Sign in</a></span>
+                                </div>
+                                <p class="error" style="text-align: center; color: red"></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--====== ERROR PART ENDS ======-->
+    
+    
+    <!--====== jquery js ======-->
+    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+
+    <!--====== Bootstrap js ======-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    
+    <!--====== Slick js ======-->
+    <script src="assets/js/slick.min.js"></script>
+
+    <!--====== Swiper js ======-->
+    <script src="assets/js/swiper.min.js"></script>
+    
+    <!--====== nice select js ======-->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    
+    <!--====== circle progress js ======-->
+    <script src="assets/js/circle-progress.min.js"></script>
+    
+    <!--====== Images Loaded js ======-->
+    <script src="assets/js/jquery.syotimer.min.js"></script>
+    
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      const loading = document.querySelector('.loading');
+      loading.setAttribute('style', 'display: none');
+      const referral = document.querySelector('#referral')
+      const query = window.location.href;
+        console.log(query)
+        if(query.includes('?')){
+          const value = query.split('?')
+          const invite = value[1].slice(7)
+          referral.value = invite
+        }
+        
+      ///////////////////////////////
+        const error = document.querySelector('.error');
+        const btn = document.querySelector('button')
+
+        
+
+        const createUser = (user) => {
+            axios.post('https://minenarapi.herokuapp.com/api/user/verify', user).then(res => {
+                const addedUser = res.data;
+                console.log(addedUser);
+                loading.setAttribute('style', 'display: none');
+                window.location.href = 'register-success.html'
+                // window.location.href = 'dashboard.html'
+            }).catch(err => {
+                console.log(err)
+                loading.setAttribute('style', 'display: none');
+            })
+        }
+////////////////////////////
+
+        const form = document.querySelector('form');
+
+        const formEvent = form.addEventListener('submit', event => {
+            event.preventDefault();
+            loading.setAttribute('style', 'display: block');
+
+            const fullname = document.querySelector('#fullname').value;
+            const email = document.querySelector('#email').value;
+            const referral = document.querySelector('#referral').value;
+            const password = document.querySelector('#password').value;
+            const cPassword = document.querySelector('#c_password').value;
+
+            const user = {
+                "fullName": fullname,
+                "email": email,
+                "referralCode": referral,
+                "password": password,
+                "confirmPassword": cPassword
+            };
+            console.log(user);
+            createUser(user);
+        });
+        ////////////////////////////////////
+
+        
+    </script>
+
+</body>
+
+
+<!-- Mirrored from gfxpartner.com/Crypten/assets/dark/singup.html by HTTrack Website Copier/3.x [XR&CO'2017], Sat, 07 May 2022 06:13:57 GMT -->
+</html>
