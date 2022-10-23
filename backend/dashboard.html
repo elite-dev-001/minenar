@@ -446,6 +446,9 @@
 </body>
 
 <script>
+	
+
+
 		////////////////// STAKE NOW ////////////////////////
 	// let solPrice;
 	const solana = document.querySelector('#solana')
@@ -462,7 +465,6 @@
 			solPrice = parseFloat(prices['USD']);
 			orcaPrice = parseFloat(prices['ORCA']) / 10000;
 			solana.innerText = `$${solPrice.toFixed(3)}`;
-			orca.innerText = `$${orcaPrice.toFixed(6)}`;
         })
         .catch(error => console.error(error));
 };
@@ -476,6 +478,15 @@
         })
         .catch(error => console.error(error));
 	};
+
+	const fetchLccPrice = () => {
+		axios.get('https://min-api.cryptocompare.com/data/price?fsym=LCC&tsyms=BTC,USD,EUR,').then((res) => {
+			console.log(res.data)
+			orca.innerText = `$${res.data['USD']}`;
+		}).catch(error => console.error(error));
+	}
+
+	fetchLccPrice()
 
 	const id = window.localStorage.getItem('id')
 	const fullName = document.querySelector('#fullName')
