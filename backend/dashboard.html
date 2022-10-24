@@ -376,8 +376,8 @@
 								<p id="to-lcc"></p>
 							</div>
 							<div style="display: flex; justify-content: center">
-								<!-- <button id="claim" class="btnx">Claim</button> -->
-								<button class="btnx">Claim</button>
+								<button id="claim" class="btnx">Claim</button>
+								<!-- <button class="btnx">Claim</button> -->
 							</div>
 							<p style="text-align: center; font-size: 1rem" id="demo"></p>
 						</div>
@@ -484,6 +484,7 @@
 		axios.get('https://min-api.cryptocompare.com/data/price?fsym=LCC&tsyms=BTC,USD,EUR,').then((res) => {
 			console.log(res.data)
 			orca.innerText = `$${res.data['USD']}`;
+			lccPrice = parseFloat(res.data['USD'])
 		}).catch(error => console.error(error));
 	}
 
@@ -511,6 +512,7 @@
 	let ltc100;
 	let solPrice = 0.00;
 	let orcaPrice = 0.00;
+	let lccPrice = 0.00;
 	let isClicked;
 
 	fetchUsdPrices();
@@ -555,7 +557,7 @@ const getUser = () => {
 	myMainBalance.innerHTML = `${data['mainBalance']} LTC`
 	myOrcaBalance.innerHTML = `${data['orcaBalance']} LCC`
 	toDollar.innerHTML = `$${(solPrice * parseFloat(mainBalance)).toFixed(3)}`
-	toLcc.innerHTML = `$${(orcaPrice * parseFloat(orcaBalance)).toFixed(3)}`
+	toLcc.innerHTML = `$${(lccPrice * parseFloat(orcaBalance)).toFixed(3)}`
 	isClicked = data['isClicked']
 	if(isClicked){
 		get24Hours()
@@ -645,7 +647,11 @@ getUser();
 	let isEmpty;
 	let stakeAmount;
 	let dStakeDate;
-	// let isClicked = window.localStorage.getItem('click');
+	const nextDay = window.localStorage.getItem('nextDay')
+	console.log(nextDay);
+	let now = new Date().getTime();
+	const distance = new Date(nextDay).getTime() - now
+	console.log('distance',distance)
 
 	axios.get('https://minenarapi.herokuapp.com/api/trades/get/all').then((res) => {
 		console.log(res.data['results'])
@@ -659,9 +665,19 @@ getUser();
 	})
 
 	const claim = document.querySelector('#claim')
-	claim.addEventListener('click', (e) => {
+	if(nextDay === null || distance < 0){
+		claim.addEventListener('click', (e) => {
 		e.preventDefault()
-		console.log('testing')
+		// let x = new Date()
+		// x.setDate(x.getDate() + 1)
+		// console.log(x.toUTCString())
+		// let countDownDate = new Date(x.toUTCString()).getTime()
+		// let now = new Date().getTime();
+		// let distance = countDownDate - now;
+		// var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		// var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		// console.log(hours, minutes, distance)
+		//console.log('testing')
 		if(!kycVerified){
 			window.alert('You\'re required to complete the verification process')
 		} else if(isEmpty) {
@@ -672,15 +688,18 @@ getUser();
 			const newBalance = (parseFloat(orcaBalance) + lccBonus).toFixed(2)
 			const data = {'orcaBalance': newBalance, 'isClicked': true}
 			axios.patch(`https://minenarapi.herokuapp.com/api/user/update/orca/balance/${id}`, data).then((res) => {
-				// const nextClaim = new Date(dStakeDate);
-				// nextClaim.setDate(nextClaim.getDate() + 1)
-				// get24Hours(nextClaim)
+				let x = new Date()
+				x.setDate(x.getDate() + 1)
+				window.localStorage.setItem('nextDay', x.toUTCString())
 				window.location.reload()
 			}).catch((err) => {
 				console.log(err)
 			})
 		}
 	})
+	}
+
+	
 	
 
 	function get24Hours(){
@@ -730,6 +749,7 @@ getUser();
 
 const stakeBalance = document.querySelector('#stake-balance')
 const dollarStakes = document.querySelector('#to-dollar-stakes')
+console.log(stakeBalance)
 
 axios.get('https://minenarapi.herokuapp.com/api/trades/get/all').then((res) => {
 	const allTrades = Array.from(res.data['results'])
